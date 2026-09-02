@@ -1,0 +1,11 @@
+data/
+*.zip
+*.tif
+*.JPG
+
+*.pth
+*.pt
+
+.venv/
+.ruff_cache/
+__pycache__/
