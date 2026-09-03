@@ -32,7 +32,9 @@ class UAVSingleDataset(Dataset):
         mean, std = [0.485, 0.456, 0.406], [0.229, 0.224, 0.225]
 
         if self.is_tile:
-            self.transform = T.Compose([T.ToTensor(), T.Normalize(mean=mean, std=std)])
+            self.transform = T.Compose(
+                [T.Resize((518, 518)), T.ToTensor(), T.Normalize(mean=mean, std=std)]
+            )
         else:
             self.transform = T.Compose(
                 [T.Resize(drone_size), T.ToTensor(), T.Normalize(mean=mean, std=std)]
