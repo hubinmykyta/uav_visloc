@@ -84,7 +84,18 @@ class UAVSingleDataset(Dataset):
                 )
                 img = Image.fromarray(tile_data)
             tensor_img = self.transform(img)
-            return tensor_img, item
+
+            meta = {
+                "tile_id": item["tile_id"],
+                "folder": item["folder"],
+                "raster_path": str(item["raster_path"]),
+                "x_px": item["x_px"],
+                "y_px": item["y_px"],
+                "size": item["size"],
+                "center_lat": item["center_lat"],
+                "center_lon": item["center_lon"],
+            }
+            return tensor_img, meta
         else:
             img = Image.open(item["img_path"]).convert("RGB")
             tensor_img = self.transform(img)
