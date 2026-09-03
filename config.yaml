@@ -1,4 +1,4 @@
-dataset_link: https://huggingface.co/datasets/nikon942/UAV-VisLoc-Folder06/resolve/main/data_06.zip
+dataset_link: https://huggingface.co/datasets/haiduonghuynhle/UAV_VisLoc_dataset/resolve/main/UAV_VisLoc_dataset.zip
 
 data_folder: data
 raw_folder: raw
@@ -10,8 +10,8 @@ tile_scales: [518, 1036, 1554]
 train_folders: [6]
 test_folders: [6]
 
-drone_res_height: 1036
-drone_res_width: 518
+drone_res_height: 518
+drone_res_width: 1036
 
 top_k: 10
 
