@@ -39,27 +39,15 @@ flowchart TD
 
 ## 📊 Benchmark & Performance Metrics
 
-> [!NOTE]
-> Evaluation evaluated on the **UAV-VisLoc Dataset (Subset 06)**.
+> Evaluation evaluated on the **UAV-VisLoc Dataset (Subset 06)** and trained on folders 1-5.
 
 | Metric | Value | Description |
 | :--- | :---: | :--- |
-| **Mean Haversine Error (MHE)** | `[INSERT MHE HERE]` | Average distance error in meters between predicted and ground-truth coordinates |
-| **Median Distance Error** | `[INSERT MEDIAN ERROR HERE]` | Median localization error |
-| **Recall@1** | `[INSERT R@1 HERE]` | Percentage of queries where Top-1 tile contains GT location |
-| **Recall@5** | `[INSERT R@5 HERE]` | Percentage of queries where Top-5 tiles contain GT location |
-| **Recall@10** | `[INSERT R@10 HERE]` | Percentage of queries where Top-10 tiles contain GT location |
-| **Homography Inlier Ratio** | `[INSERT INLIER RATIO HERE%]` | Average percentage of valid MAGSAC++ inliers for successful matches |
-| **Inference Time / Image** | `[INSERT TIME HERE]` | Total end-to-end processing time per query frame on NVIDIA T4/RTX 3090 |
-
-### Error Distribution & Threshold Metrics
-
-| Error Threshold | Accuracy (%) |
-| :--- | :---: |
-| **$\le$ 5 meters** | `[INSERT %, e.g. 45.2%]` |
-| **$\le$ 10 meters** | `[INSERT %, e.g. 72.8%]` |
-| **$\le$ 25 meters** | `[INSERT %, e.g. 91.5%]` |
-| **$\le$ 50 meters** | `[INSERT %, e.g. 97.1%]` |
+| **Mean Haversine Error (MHE)** | `870.01` | Average distance error in meters between predicted and ground-truth coordinates |
+| **Median Distance Error** | `606.75` | Median localization error |
+| **Recall@1** | `6.10` | Percentage of queries where Top-1 tile contains GT location |
+| **Recall@5** | `22.38` | Percentage of queries where Top-5 tiles contain GT location |
+| **Recall@10** | `36.92` | Percentage of queries where Top-10 tiles contain GT location |
 
 ---
 
